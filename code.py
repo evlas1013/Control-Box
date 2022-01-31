@@ -74,7 +74,7 @@ lastPressed = -1
 while True:
     time.sleep(0.01)
     currentDelay += 1
-    print(lastPressed)
+    #print(lastPressed)
 
     if b0.value and (lastPressed != 0 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.ZERO)
