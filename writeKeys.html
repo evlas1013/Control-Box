@@ -1,24 +1,8 @@
+<!DOCTYPE html>
 <html>
-<script>
-var startIndex = 8;
-var endIndex = 19;
-var output = "";
-for(var i = startIndex; i<=endIndex; i++)
-{
-	output += "b" + i +" = digitalio.DigitalInOut(board.GP"+i+")\n";
-	output += "b" + i +".switch_to_input(pull=digitalio.Pull.DOWN)\n\n";
-}
-
-
-for(var i = startIndex; i<=endIndex; i++)
-{
-	output += "if b"+i+".value and (lastPressed != "+i+" or currentDelay > buttonDelay):\n";
-	output += "\tk.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.ZERO)\n";
-	output += "\tlastPressed = "+i+"\n";
-	output += "\tcurrentDelay = 0\n\n";
-}
-console.log(output);
-//document.getElementById("myOutput").value = output;
-</script>
-<textarea id="myOutput" value="code"></textarea>
+<body>
+	Number of Buttons: <input id="numberOfButtons" size=2, value="1" type="number"><input type="button" value="generate .py code" onClick="generate();"> <br>
+	<textarea id="myOutput" cols="100" rows="200"></textarea>
+</body>
+<script src="writeKeys.js"></script>
 </html>
