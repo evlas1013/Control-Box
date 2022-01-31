@@ -31,6 +31,42 @@ b6.switch_to_input(pull=digitalio.Pull.DOWN)
 b7 = digitalio.DigitalInOut(board.GP7)
 b7.switch_to_input(pull=digitalio.Pull.DOWN)
 
+b8 = digitalio.DigitalInOut(board.GP8)
+b8.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b9 = digitalio.DigitalInOut(board.GP9)
+b9.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b10 = digitalio.DigitalInOut(board.GP10)
+b10.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b11 = digitalio.DigitalInOut(board.GP11)
+b11.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b12 = digitalio.DigitalInOut(board.GP12)
+b12.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b13 = digitalio.DigitalInOut(board.GP13)
+b13.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b14 = digitalio.DigitalInOut(board.GP14)
+b14.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b15 = digitalio.DigitalInOut(board.GP15)
+b15.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b16 = digitalio.DigitalInOut(board.GP16)
+b16.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b17 = digitalio.DigitalInOut(board.GP17)
+b17.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b18 = digitalio.DigitalInOut(board.GP18)
+b18.switch_to_input(pull=digitalio.Pull.DOWN)
+
+b19 = digitalio.DigitalInOut(board.GP19)
+b19.switch_to_input(pull=digitalio.Pull.DOWN)
+
 
 buttonDelay = 50
 currentDelay = 0
@@ -78,6 +114,67 @@ while True:
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.SEVEN)
         lastPressed = 7
         currentDelay = 0
+
+    if b8.value and (lastPressed != 8 or currentDelay > buttonDelay):
+	k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.EIGHT)
+	lastPressed = 8
+	currentDelay = 0
+
+    if b9.value and (lastPressed != 9 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.NINE)
+        lastPressed = 9
+        currentDelay = 0
+
+    if b10.value and (lastPressed != 10 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.ZERO)
+        lastPressed = 10
+        currentDelay = 0
+
+    if b11.value and (lastPressed != 11 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.ONE)
+        lastPressed = 11
+        currentDelay = 0
+
+    if b12.value and (lastPressed != 12 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.TWO)
+        lastPressed = 12
+        currentDelay = 0
+
+    if b13.value and (lastPressed != 13 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.THREE)
+        lastPressed = 13
+        currentDelay = 0
+
+    if b14.value and (lastPressed != 14 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.FOUR)
+        lastPressed = 14
+        currentDelay = 0
+
+    if b15.value and (lastPressed != 15 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.FIVE)
+        lastPressed = 15
+        currentDelay = 0
+
+    if b16.value and (lastPressed != 16 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.SIX)
+        lastPressed = 16
+        currentDelay = 0
+
+    if b17.value and (lastPressed != 17 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.SEVEN)
+        lastPressed = 17
+        currentDelay = 0
+
+    if b18.value and (lastPressed != 18 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.EIGHT)
+        lastPressed = 18
+        currentDelay = 0
+
+    if b19.value and (lastPressed != 19 or currentDelay > buttonDelay):
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.NINE)
+        lastPressed = 19
+        currentDelay = 0
+
 
     time.sleep(0.01)
 
