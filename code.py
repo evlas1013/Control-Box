@@ -68,6 +68,7 @@ while True:
         lastPressed = 5
         currentDelay = 0
 
+    #Buttons 6 and 7 will be "continuous" and have no cooldown
     if b6.value:
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.SIX)
         lastPressed = 6
