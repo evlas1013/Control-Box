@@ -167,7 +167,7 @@ while True:
         currentDelay = 0
 
     if b15.value and (lastPressed != 15 or currentDelay > buttonDelay):
-        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.FIVE)
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.FIVE)
         lastPressed = 15
         currentDelay = 0
         continue
