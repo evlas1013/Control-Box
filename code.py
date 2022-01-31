@@ -72,78 +72,94 @@ buttonDelay = 50
 currentDelay = 0
 lastPressed = -1
 while True:
+    time.sleep(0.01)
     currentDelay += 1
+    print(lastPressed)
 
     if b0.value and (lastPressed != 0 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.ZERO)
         lastPressed = 0
         currentDelay = 0
+        continue
 
     if b1.value and (lastPressed != 1 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.ONE)
         lastPressed = 1
         currentDelay = 0
+        continue
 
     if b2.value and (lastPressed != 2 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.TWO)
         lastPressed = 2
         currentDelay = 0
+        continue
 
     if b3.value and (lastPressed != 3 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.THREE)
         lastPressed = 3
         currentDelay = 0
+        continue
 
     if b4.value and (lastPressed != 4 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.FOUR)
         lastPressed = 4
         currentDelay = 0
+        continue
 
     if b5.value and (lastPressed != 5 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.FIVE)
         lastPressed = 5
         currentDelay = 0
+        continue
 
     #Buttons 6 and 7 will be "continuous" and have no cooldown
     if b6.value:
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.SIX)
         lastPressed = 6
         currentDelay = 0
+        continue
 
     if b7.value:
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.SEVEN)
         lastPressed = 7
         currentDelay = 0
+        continue
 
     if b8.value and (lastPressed != 8 or currentDelay > buttonDelay):
-	k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.EIGHT)
-	lastPressed = 8
-	currentDelay = 0
+        k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.EIGHT)
+        lastPressed = 8
+        currentDelay = 0
+        continue
 
     if b9.value and (lastPressed != 9 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, Keycode.NINE)
         lastPressed = 9
         currentDelay = 0
+        continue
 
     if b10.value and (lastPressed != 10 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.ZERO)
         lastPressed = 10
         currentDelay = 0
+        continue
 
     if b11.value and (lastPressed != 11 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.ONE)
         lastPressed = 11
         currentDelay = 0
+        continue
 
     if b12.value and (lastPressed != 12 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.TWO)
         lastPressed = 12
         currentDelay = 0
+        continue
 
     if b13.value and (lastPressed != 13 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.THREE)
         lastPressed = 13
         currentDelay = 0
+        continue
 
     if b14.value and (lastPressed != 14 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.FOUR)
@@ -154,27 +170,29 @@ while True:
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.FIVE)
         lastPressed = 15
         currentDelay = 0
+        continue
 
     if b16.value and (lastPressed != 16 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.SIX)
         lastPressed = 16
         currentDelay = 0
+        continue
 
     if b17.value and (lastPressed != 17 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.SEVEN)
         lastPressed = 17
         currentDelay = 0
+        continue
 
     if b18.value and (lastPressed != 18 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.EIGHT)
         lastPressed = 18
         currentDelay = 0
+        continue
 
     if b19.value and (lastPressed != 19 or currentDelay > buttonDelay):
         k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_SHIFT, Keycode.LEFT_ALT, Keycode.NINE)
         lastPressed = 19
         currentDelay = 0
-
-
-    time.sleep(0.01)
+        continue
 
