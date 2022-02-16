@@ -52,8 +52,10 @@ function generate(){
 	for(var i = startIndex; i<=endIndex; i++)
 	{
 		output += "    if b"+i+".value and (lastPressed != "+i+" or currentDelay > buttonDelay):\n";
-		output += "        (k.send(Keycode.LEFT_CONTROL, Keycode.LEFT_ALT, ";
-		if(i>=10)
+		output += "        (k.send(Keycode.LEFT_CONTROL, ";
+		if(i<10)
+			output += "Keycode.LEFT_ALT, ";
+		else
 			output += "Keycode.LEFT_SHIFT, ";
 		output += "Keycode."+keyCodes[i]+")\n";
 		output += "        lastPressed = "+i+"\n";
